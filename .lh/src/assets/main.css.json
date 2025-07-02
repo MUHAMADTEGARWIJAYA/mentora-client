@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/assets/main.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1751437254929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1751437405261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+@tailwind base;\n+@tailwind components;\n+@tailwind utilities;\n"
+                },
+                {
+                    "date": 1751472477131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+@tailwind base;\n+@tailwind components;\n+@tailwind utilities;\n+\n+body {\n+  font-family: 'Josefin Sans', sans-serif;\n+}\n"
+                },
+                {
+                    "date": 1751472738504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,11 @@\n @tailwind base;\n @tailwind components;\n @tailwind utilities;\n \n+/* body {\n+  font-family: 'Josefin Sans', sans-serif;\n+} */\n+\n body {\n-  font-family: 'Josefin Sans', sans-serif;\n+  font-family: 'Outfit', sans-serif;\n }\n"
+                }
+            ],
+            "date": 1751437254929,
+            "name": "Commit-0",
+            "content": "@tailwind base;\n@tailwind components;\n@tailwind utilities;\n"
+        }
+    ]
+}
