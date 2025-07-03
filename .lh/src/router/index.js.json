@@ -3,11 +3,31 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1751437381576,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1751518674201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n import { createRouter, createWebHistory } from 'vue-router'\n-import FormMain from '@/views/form/FormMain.vue'\n+import LoginForm from '@/views/form/LoginForm.vue'\n \n const router = createRouter({\n   history: createWebHistory(import.meta.env.BASE_URL),\n   routes: [\n     {\n       path: '/',\n       name: 'home',\n-      component: FormMain,\n+      component: LoginForm,\n     },\n   ],\n })\n \n"
+                },
+                {
+                    "date": 1751532813388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { createRouter, createWebHistory } from 'vue-router'\n import LoginForm from '@/views/form/LoginForm.vue'\n+import RegisterForm from '@/views/form/RegisterForm.vue'\n \n const router = createRouter({\n   history: createWebHistory(import.meta.env.BASE_URL),\n   routes: [\n@@ -8,8 +9,13 @@\n       path: '/',\n       name: 'home',\n       component: LoginForm,\n     },\n+    {\n+      path: '/register',\n+      name: 'register',\n+      component: RegisterForm,\n+    },\n   ],\n })\n \n export default router\n"
+                },
+                {
+                    "date": 1751532863250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n const router = createRouter({\n   history: createWebHistory(import.meta.env.BASE_URL),\n   routes: [\n     {\n-      path: '/',\n-      name: 'home',\n+      path: '/login',\n+      name: 'login',\n       component: LoginForm,\n     },\n     {\n       path: '/register',\n"
+                },
+                {
+                    "date": 1751534056608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,17 @@\n import { createRouter, createWebHistory } from 'vue-router'\n import LoginForm from '@/views/form/LoginForm.vue'\n import RegisterForm from '@/views/form/RegisterForm.vue'\n-\n+import MainLayout from '@/layout/MainLayout.vue'\n const router = createRouter({\n   history: createWebHistory(import.meta.env.BASE_URL),\n   routes: [\n     {\n+      path: '/',\n+      name: 'main',\n+      component: MainLayout,\n+    },\n+    {\n       path: '/login',\n       name: 'login',\n       component: LoginForm,\n     },\n"
+                },
+                {
+                    "date": 1751539086659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,28 @@\n import { createRouter, createWebHistory } from 'vue-router'\n import LoginForm from '@/views/form/LoginForm.vue'\n import RegisterForm from '@/views/form/RegisterForm.vue'\n import MainLayout from '@/layout/MainLayout.vue'\n+\n const router = createRouter({\n   history: createWebHistory(import.meta.env.BASE_URL),\n   routes: [\n     {\n       path: '/',\n       name: 'main',\n       component: MainLayout,\n+      children: [\n+        {\n+          path: '/dashboard',\n+          name: 'dashboard',\n+          component: () => import('../views/dashboard/DashboardMain.vue'),\n+        },\n+        {\n+          path: '/my-courses',\n+          name: 'my-courses',\n+          component: () => import('../views/my-courses/CoursesMain.vue'),\n+        },\n+      ],\n     },\n     {\n       path: '/login',\n       name: 'login',\n"
                 }
             ],
             "date": 1751437381576,
